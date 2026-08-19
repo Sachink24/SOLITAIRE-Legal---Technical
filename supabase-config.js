@@ -1,7 +1,7 @@
 /* =====================================================================
    SOLITAIRE — Shared Supabase Configuration
    -----------------------------------------------------------------------
-   Used by: index.html, legal.html, technical.html
+   Used by: index.html, legal.html, technical.html, credit.html
    Project: nbpvamrwzqrgoiwpadwc  (Solitaire Finz Mart)
 
    Load this file AFTER the supabase-js CDN script and BEFORE your page's
@@ -122,6 +122,8 @@
             reportDate: new Date().toISOString().slice(0, 10),
             bankName: normalizeBankName(lead.institution_name),
             loanType: lead.loan_type || '',
+            requestedLoanAmount: lead.loan_amount || '',
+            cibilScore: b.cibilScore || '',
             __leadId: lead.id,
             __rawLead: lead   // kept in case a page wants deeper fields (docs, valuation, etc.)
         };
